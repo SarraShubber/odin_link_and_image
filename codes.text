@@ -199,76 +199,201 @@ function favoriteAnimal(animal) {
   
  }
 console.log(add7(10))
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
-
-for (let i = 1; i <= answer; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 === 0) {
-    console.log("fizz");
-  } else if(i % 5 === 0) {
-    console.log("Buzz");
-  }else{
-    console.log(i);
-  }
-}
-// function game{}
-// function playRound(playerSelection, computerSelection) {
-//   let choices = ('rock', 'paper', 'scissors');
-  
-//    let getComputerChoice = prompt("Please enter rock or paper or scissors: ");
-//   if(getComputerChoice==="rock"){
-//      return "Tip";
-//   }else if (getComputerChoice==="paper") {
-//       return "You Lose! Paper beats Rock";
-//   } else if(getComputerChoice==="scissors"){
-//     return "You Lose! scissors beats Rock";
-//   }else{
-//     return "unknown";
-//   }
-    
-//   }
-
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// (playRound(playerSelection, computerSelection));
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits);
-
-
-const btn = document.querySelector("button");
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-
-document.addEventListener("DOMContentLoaded", () => {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
-});
-
-function random(number) {
-  return Math.floor(Math.random() * number);
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let i = 0; i < 100; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "rgb(255 0 0 / 50%)";
-    ctx.arc(
-      random(canvas.width),
-      random(canvas.height),
-      random(50),
-      0,
-      2 * Math.PI,
-    );
-    ctx.fill();
-  }
-}
-
-btn.addEventListener("click", draw);
-
-
   </script>
 
 </body>
 </html>
+
+
+
+
+div{
+    font-size: 64px;
+    color: limegreen;
+    padding: 200px;
+    margin: 10px;
+}
+.alert-text {
+    font-size: 64px;
+    color: red;
+    padding: 100px;
+  }
+#title {
+     background-color: blueviolet;
+font-size: 70px;
+padding: 50px;  
+  }
+
+  /* .read,
+  .unread {
+         color: white;
+         background-color: black;
+} */
+
+.subsection.header {
+    color: red;
+    background-color: dimgrey;
+}
+.subsection#preview{
+    color: chartreuse;
+    background-color: darkgreen;
+}
+
+.subsection {
+    color: blue;
+  }
+                            /* in this code the text show with red color bec it's more specifically only class selectors*/
+  /* rule 2 */
+  .main .list {
+    color: red;          
+  }
+
+  /* rule 1 */
+#subsection {
+    color: blue;
+  }
+                           /* in this code the text show with blue color bec it's more class selectors specifically using ID */
+  /* rule 2 */
+  .main .list {
+    color: red;
+  }
+
+  /* rule 1 */
+#subsection {
+    background-color: yellow;
+    color: blue;
+  }
+                          /*Both rules have only one ID selector, but rule 2 has a class selector in addition to the ID selector, so rule 2 has a higher specificity!*/
+  /* rule 2 */
+  .main #subsection {
+   color: red;
+  }
+
+  
+/* styles.css */
+
+#parent {
+  color: red;
+}
+
+
+.child {
+  color: blue;
+}
+
+/* *{
+    outline: 5px solid rgb(0, 255, 85);
+  } */
+
+  div {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #0a0101;
+  }
+  
+  .introduction {
+    background-color: #548CA8;
+  }
+  
+  .main-content {
+    background-color: #476072;
+  }
+  
+  .contact-us {
+    text-align: right;
+    background-color: #334257;
+  }
+  .highlight
+  {
+    background-color: maroon;
+  }
+
+
+
+  
+  p {
+    background: rgb(255 84 104 / 30%);
+    color: black;
+    border: 5px solid rgb(255 84 104);
+    padding: 0px;
+    margin: 100px;
+
+  }
+  
+  span {
+    background: rgb(144, 202, 7);
+    border: 1px solid black;
+  }
+  
+  .flex-container {
+    display: flex; 
+  }
+  
+  /* this selector selects all divs inside of .flex-container */
+  .flex-container div  {
+    background: peachpuff;
+    color: #476072;
+    border: 4px solid brown;
+    height: 100px
+    
+  
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 16px;
+    background: burlywood;
+    border: 4px solid indigo;
+
+   
+    /* flex-wrap: wrap; */
+   }
+   
+   .child {
+    background-color:burlywood;
+    color:#ffffff;
+    border: 1px solid black;
+    padding: 1px;
+    margin: 5px;
+    height: 140px;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    flex: 1 1 0%;
+    align-self: center;
+    gap: 10px;
+   }
+   .child:nth-child(1) {
+    
+    background-color: #334257;
+    
+   }
+   
+   .child:nth-child(2) {
+    
+        background-color: #476072;
+        
+   }
+   
+   .child:nth-child(3) {
+    
+    background-color: #548CA8;
+    
+   
+   }
+   .image{
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+
+    }
+    
+    .image img {
+      max-width: 100%;
+      max-height: 100%;
+      padding-left: 5px;
+      /* Optional: Add additional styling as needed */
+    }
+   
